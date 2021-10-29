@@ -16,4 +16,10 @@ describe('Office', () => {
         expect(office.roomsToBook()).toEqual([room])
 
     })
+
+    it('lit all meeting rooms', ()=> {
+        office.addRoom(room);
+        office.addRoom(room);
+        expect(office.roomsToBook()).toEqual([room,room])
+    })
 })
